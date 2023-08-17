@@ -1,0 +1,33 @@
+name: Clonar y Actualizar
+
+on: [push]
+
+jobs:
+  clonar-repositorio-y-actualizar:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Clonar un Repositorio Diferente
+        uses: actions/checkout@v2
+        with:
+          repository: https://github.com/Stefanyb918/pruba.git
+
+      - name: Configurar Git
+        run: |
+          git config --local user.email "gloria.bohorquez.se@bvc.com.co"
+          git config --local user.name "Stefanyb918"
+
+      - name: Realizar Cambios y Hacer Commit
+        run: |
+          # Realiza los cambios necesarios en los archivos
+          # Por ejemplo, crea un nuevo archivo o modifica uno existente
+          echo "Nuevo contenido" > archivo.txt
+          
+          # Hacer commit de los cambios
+          git add archivo.txt
+          git commit -m "Agregado un nuevo archivo"
+
+      - name: Push de los Cambios
+        run: |
+          # Realizar el push de los cambios al repositorio
+          git push origin main
