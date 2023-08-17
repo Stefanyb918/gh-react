@@ -10,7 +10,7 @@ jobs:
       - name: Clonar un Repositorio Diferente
         uses: actions/checkout@v2
         with:
-          repository: Stefanyb918/pruba
+          repository: Stefanyb918/gb-react-vite
 
       - name: Configurar Git
         run: |
@@ -30,4 +30,4 @@ jobs:
       - name: Push de los Cambios
         run: |
           # Realizar el push de los cambios al repositorio
-          git push origin master
+          git push origin main
