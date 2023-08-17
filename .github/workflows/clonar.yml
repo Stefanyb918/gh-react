@@ -10,7 +10,7 @@ jobs:
       - name: Clonar un Repositorio Diferente
         uses: actions/checkout@v2
         with:
-          repository: https://github.com/Stefanyb918/pruba.git
+          repository: Stefanyb918/pruba
 
       - name: Configurar Git
         run: |
