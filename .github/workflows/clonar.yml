@@ -30,4 +30,4 @@ jobs:
       - name: Push de los Cambios
         run: |
           # Realizar el push de los cambios al repositorio
-          git push origin main
+          git push origin master
